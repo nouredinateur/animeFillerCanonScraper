@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnimeFiller</title>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        font-family: 'Karla', sans-serif;
+        color: white;
+        background-color: black;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+    }
+</style>
+<body>
+    <div class="container">
+        <div>
+            <span> Manga Canon Episodes: </span>
+            <% for(var i = 0 ; i < eps.length ; i++){%>
+            <div>
+                <p><%= eps[i].canon %></p>
+                
+            </div>
+            <% } %>
+            </div>
+        <div>
+            <span>Filler Episodes: </span>
+            <% for(var i = 0 ; i < eps.length ; i++){%>
+            <div>
+                <p><%= eps[i].filler %></p>
+            </div>
+            <% } %>
+        </div>
+        <div>
+            <span>Mixed Filler/Canon Episodes: </span>
+            <% for(var i = 0 ; i < eps.length ; i++){%>
+            <div>
+                <p><%= eps[i].mixed %></p>
+            </div>
+            <% } %>
+        </div>
+        <div>
+            <span>Anime Canon Episodes: </span>
+            <% for(var i = 0 ; i < eps.length ; i++){%>
+            <div>
+                <p><%= eps[i].animeCanon %></p>
+            </div>
+            <% } %>
+        </div>
+
+    </div>
+</body>
+</html>
